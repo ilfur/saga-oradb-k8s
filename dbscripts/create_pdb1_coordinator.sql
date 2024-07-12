@@ -6,7 +6,7 @@ end;
 
 --begin
 --  dbms_saga_adm.add_coordinator(coordinator_name => 'CloudBankCoordinator', mailbox_schema => 'pdb_adm', broker_name => 'TEST', dblink_to_coordinator => null);
---  dbms_saga_adm.add_participant(participant_name => 'CloudBank', coordinator_name => 'CloudBankCoordinator' , dblink_to_broker => null , mailbox_schema => 'pdb_adm' , broker_name => 'TEST', dblink_to_participant => null);
+--  dbms_saga_adm.add_participant(participant_name => 'CloudBank', coordinator_name => 'CloudBankCoordinator' , dblink_to_broker => null , mailbox_schema => 'pdb_adm' , broker_name => 'TEST', dblink_to_participant => 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
 --end;
 
 //demo2: travel agency bookings
@@ -34,6 +34,6 @@ end dbms_ta_cbk;
 
 
 begin
-    dbms_saga_adm.add_coordinator(coordinator_name => 'TravelCoordinator', mailbox_schema => 'pdb_adm', broker_name => 'TEST', dblink_to_coordinator => null);
-    dbms_saga_adm.add_participant(participant_name => 'TravelAgencyPLSQL',   coordinator_name => 'TravelCoordinator' ,   dblink_to_broker => null ,   mailbox_schema => 'pdb_adm' ,   broker_name => 'TEST' ,   callback_package => 'dbms_ta_cbk' ,   dblink_to_participant => null);
+    dbms_saga_adm.add_coordinator(coordinator_name => 'TravelCoordinator', mailbox_schema => 'pdb_adm', broker_name => 'TEST', dblink_to_coordinator => 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
+    dbms_saga_adm.add_participant(participant_name => 'TravelAgencyPLSQL',   coordinator_name => 'TravelCoordinator' ,   dblink_to_broker => null ,   mailbox_schema => 'pdb_adm' ,   broker_name => 'TEST' ,   callback_package => 'dbms_ta_cbk' ,   dblink_to_participant => 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
 end;
