@@ -77,11 +77,3 @@ begin
 end;
 /
   
-create table cartest(text VARCHAR2(100));
-create table cars(id NUMBER, available NUMBER);
-insert into cars values(1,2);
-create or replace package dbms_car_cbk as
-function request(saga_id in RAW, saga_sender IN VARCHAR2, payload IN JSON DEFAULT NULL) return JSON;
-procedure after_rollback(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL);
-end dbms_car_cbk;
-/
