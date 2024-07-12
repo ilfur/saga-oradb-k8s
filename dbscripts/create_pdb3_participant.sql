@@ -37,6 +37,6 @@ end dbms_car_cbk;
 
 --Add participant
 begin
-  dbms_saga_adm.add_participant(participant_name=> 'CarPLSQL' ,  dblink_to_broker=> 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM',mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_car_cbk' , dblink_to_participant=> 'SAGAPDB3.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
+  dbms_saga_adm.add_participant(participant_name=> 'CarPLSQL' ,  dblink_to_broker=> 'SAGA1', mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_car_cbk' , dblink_to_participant=> 'SAGA3');
 end;
 /
