@@ -65,7 +65,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: sqlcl-pvc
-  namespace: 23aidemo
+  namespace: saga-oradb
 spec:
   accessModes:
     - ReadWriteOnce
