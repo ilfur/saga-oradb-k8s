@@ -1,7 +1,7 @@
 apiVersion: database.oracle.com/v1alpha1
 kind: PDB
 metadata:
-  name: cloud-pdb-2
+  name: saga-pdb-2
   namespace: saga-oradb
   labels:
     cdb: ai23-remote-cdb
@@ -9,7 +9,7 @@ spec:
   cdbResName: "ai23-cloud-cdb"
   cdbNamespace: "23aidemo"
   cdbName: "DB23ai"
-  pdbName: "cloudpdb2"
+  pdbName: "sagapdb2"
   adminName:
     secret:
       secretName: "aipdb-secret"
