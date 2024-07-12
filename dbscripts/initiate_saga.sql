@@ -4,6 +4,6 @@ declare
 begin
   saga_id := dbms_saga.begin_saga('TravelAgency');
   request := json('{"flight":"United"}');
-  dbms_saga.send_request(saga_id, 'Airline', request);
+  dbms_saga.send_request(saga_id, 'FlightPLSQL', request);
 end;
 /
