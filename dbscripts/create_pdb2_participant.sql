@@ -34,7 +34,7 @@ end dbms_flight_cbk;
 
 --Add participant
 begin 
-  dbms_saga_adm.add_participant(participant_name=> 'FlightPLSQL' ,  dblink_to_broker=> 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM',mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_flight_cbk' , dblink_to_participant=> 'SAGAPDB2.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
+  dbms_saga_adm.add_participant(participant_name=> 'FlightPLSQL' ,  dblink_to_broker=> 'SAGA1', mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_flight_cbk' , dblink_to_participant=> 'SAGA2');
 end;
 /
 
@@ -73,7 +73,7 @@ end dbms_hotel_cbk;
 
 --Add participant
 begin
-  dbms_saga_adm.add_participant(participant_name=> 'HotelPLSQL' ,  dblink_to_broker=> 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM',mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_hotel_cbk' , dblink_to_participant=> 'SAGAPDB2.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
+  dbms_saga_adm.add_participant(participant_name=> 'HotelPLSQL' ,  dblink_to_broker=> 'SAGA1', mailbox_schema=> 'pdb_adm',broker_name=> 'TEST', callback_package => 'dbms_hotel_cbk' , dblink_to_participant=> 'SAGA2');
 end;
 /
   
