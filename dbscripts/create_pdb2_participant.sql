@@ -9,7 +9,7 @@ end dbms_flight_cbk;
 /
 
 create or replace package body dbms_flight_cbk as
-function request(saga_id in RAW, saga_sender IN VARCHAR2, payload IN JSON DEFAULT NULL) return JSON as
+function request(saga_id in RAW, saga_sender IN VARCHAR2, payload IN JSON DEFAULT NULL) return JSON as 
 response JSON;
 tickets NUMBER;
 begin
@@ -24,9 +24,8 @@ begin
   update flights set available = available - 1 where id = 1;
   return response;
 end;
-/
   
-create or replace procedure after_rollback(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL)as
+procedure after_rollback(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL)as
 begin
   update flights set available = available + 1 where id = 1;
 end;
@@ -64,8 +63,7 @@ begin
   update hotels set available = available - 1 where id = 1;
   return response;
 end;
-/
-  
+
 procedure after_rollback(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL)as
 begin
   update hotels set available = available + 1 where id = 1;
