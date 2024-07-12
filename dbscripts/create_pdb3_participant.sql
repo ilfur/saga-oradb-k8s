@@ -27,7 +27,6 @@ begin
   update cars set available = available - 1 where id = 1;
   return response;
 end;
-/
 
 procedure after_rollback(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL)as
 begin
