@@ -36,7 +36,7 @@ end dbms_ta_cbk;
 
 
 begin
-    dbms_saga_adm.add_coordinator(coordinator_name => 'TravelCoordinator', mailbox_schema => 'pdb_adm', broker_name => 'TEST', dblink_to_coordinator => 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
-    dbms_saga_adm.add_participant(participant_name => 'TravelAgencyPLSQL',   coordinator_name => 'TravelCoordinator' ,   dblink_to_broker => null ,   mailbox_schema => 'pdb_adm' ,   broker_name => 'TEST' ,   callback_package => 'dbms_ta_cbk' ,   dblink_to_participant => 'SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM');
+    dbms_saga_adm.add_coordinator(coordinator_name => 'TravelCoordinator', mailbox_schema => 'pdb_adm', broker_name => 'TEST', dblink_to_coordinator => 'SAGA1');
+    dbms_saga_adm.add_participant(participant_name => 'TravelAgencyPLSQL',   coordinator_name => 'TravelCoordinator' ,   dblink_to_broker => 'SAGA1' ,   mailbox_schema => 'pdb_adm' ,   broker_name => 'TEST' ,   callback_package => 'dbms_ta_cbk' ,   dblink_to_participant => 'SAGA1');
 end;
 /
