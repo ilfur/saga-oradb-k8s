@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: instantclient-sqlplus
+  namespace: saga-oradb
+spec:
+  ports:
+  - name: console
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: instantclient
+    app.kubernetes.io/name: instantclient-sqlplus
+  type: ClusterIP
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+  name: instantclient-sqlplus-vservice
+  namespace: saga-oradb
+spec:
+  gateways:
+  - istio-system/http-istio-gateway
+  hosts:
+  - sagasql.141.147.33.9.nip.io
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: instantclient-sqlplus
+        port:
+          number: 8080
