@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sqlplus-scripts-config
+  namespace: saga-oradb
+data:
+  getfiles.sh: |-
+    #!/bin/bash 
+    cd /tmp
+    git clone https://github.com/ilfur/saga-oradb-k8s
+    cp -R saga-oradb-k8s/dbscripts/* /projects
+    rm -rf saga-oradb-k8s
