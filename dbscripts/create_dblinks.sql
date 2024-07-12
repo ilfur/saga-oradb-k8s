@@ -1,3 +1,3 @@
-CREATE PUBLIC DATABASE LINK SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb1.privatek8snet.k8snet.oraclevcn.com'
-CREATE PUBLIC DATABASE LINK SAGAPDB2.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb2.privatek8snet.k8snet.oraclevcn.com'
-CREATE PUBLIC DATABASE LINK SAGAPDB3.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb3.privatek8snet.k8snet.oraclevcn.com'
+CREATE PUBLIC DATABASE LINK SAGAPDB1.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb1.privatek8snet.k8snet.oraclevcn.com';
+CREATE PUBLIC DATABASE LINK SAGAPDB2.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb2.privatek8snet.k8snet.oraclevcn.com';
+CREATE PUBLIC DATABASE LINK SAGAPDB3.PRIVATEK8SNET.K8SNET.ORACLEVCN.COM CONNECT TO pdb_adm IDENTIFIED BY pdb_adm using '//db23ai.privatek8snet.k8snet.oraclevcn.com:1521/sagapdb3.privatek8snet.k8snet.oraclevcn.com';
