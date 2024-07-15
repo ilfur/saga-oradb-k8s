@@ -34,7 +34,8 @@ spec:
   #action: "Delete"
   #dropAction: "INCLUDING"
   pdbState: "OPEN"
-  modifyOption: "IMMEDIATE"
+  #pdbState: "CLOSE"
+  #modifyOption: "IMMEDIATE"
   action: "Modify"
   pdbTlsCat:
     secret:
