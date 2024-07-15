@@ -33,11 +33,13 @@ data:
     FROM
         (
             SELECT DISTINCT
-                t1.inst_id,
+                --t1.inst_id,
+                1 inst_id
                 t2.queue_name
             FROM
-                gv$aq_sharded_subscriber_stat   t1
-                JOIN gv$persistent_queues            t2 ON t1.queue_id = t2.queue_id    
+                --gv$aq_sharded_subscriber_stat   t1 
+                --JOIN gv$persistent_queues            t2 ON t1.queue_id = t2.queue_id  
+                gv$persistent_queues            t2  
         )
     GROUP BY
         inst_id
@@ -54,10 +56,11 @@ data:
     FROM
         (
             SELECT DISTINCT
-                inst_id,
+                1 inst_id,
                 subscriber_id
             FROM
-                gv$aq_sharded_subscriber_stat
+                --gv$aq_sharded_subscriber_stat
+                dba_queue_subscribers
         )
     GROUP BY
         inst_id
