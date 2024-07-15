@@ -6,11 +6,11 @@ metadata:
 spec:
   database:
     dbUser:
-      key: "sysadmin_user"
+      key: "oracle_user"
       secret: aipdb-secret
 
     dbPassword:
-      key: "sysadmin_pwd"
+      key: "oracle_pwd"
       secret: aipdb-secret
 
     dbConnectionString:
@@ -43,11 +43,11 @@ metadata:
 spec:
   database:
     dbUser:
-      key: "sysadmin_user"
+      key: "oracle_user"
       secret: aipdb-secret
 
     dbPassword:
-      key: "sysadmin_pwd"
+      key: "oracle_pwd"
       secret: aipdb-secret
 
     dbConnectionString:
@@ -80,11 +80,11 @@ spec:
   database:
     dbUser:
     dbUser:
-      key: "sysadmin_user"
+      key: "oracle_user"
       secret: aipdb-secret
 
     dbPassword:
-      key: "sysadmin_pwd"
+      key: "oracle_pwd"
       secret: aipdb-secret
 
     dbConnectionString:
