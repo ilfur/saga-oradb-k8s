@@ -20,10 +20,13 @@ spec:
 
   exporter:
     image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
-    
     service:
       port: 9161
-
+    configuration:
+      configmap:
+        key: "teq.toml"
+        configmapName: "toml-config"
+       
   prometheus:
     port: metrics
     labels:
@@ -53,9 +56,12 @@ spec:
 
   exporter:
     image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
-    
     service:
       port: 9161
+    configuration:
+      configmap:
+        key: "teq.toml"
+        configmapName: "toml-config"
 
   prometheus:
     port: metrics
@@ -88,9 +94,12 @@ spec:
 
   exporter:
     image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
-    
     service:
       port: 9161
+    configuration:
+      configmap:
+        key: "teq.toml"
+        configmapName: "toml-config"
 
   prometheus:
     port: metrics
