@@ -1,0 +1,32 @@
+apiVersion: observability.oracle.com/v1alpha1
+kind: DatabaseObserver
+metadata:
+  name: pdb1-observer
+  namespace: sidb23c
+spec:
+  database:
+    dbUser:
+      key: "oracle_user"
+      secret: db-admin-secret
+
+    dbPassword:
+      key: "oracle_pwd"
+      secret: db-admin-secret
+
+    dbConnectionString:
+      key: "connection"
+      secret: db-admin-secret
+
+
+  exporter:
+    image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
+    
+    service:
+      port: 9161
+
+  prometheus:
+    port: metrics
+    labels:
+      app: app-sample-label
+
+  replicas: 1
