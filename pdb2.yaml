@@ -34,6 +34,7 @@ spec:
   #action: "Delete"
   #dropAction: "INCLUDING"
   pdbState: "OPEN"
+  modifyOption: "READ WRITE"
   #pdbState: "CLOSE"
   #modifyOption: "IMMEDIATE"
   action: "Modify"
