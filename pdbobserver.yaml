@@ -2,7 +2,7 @@ apiVersion: observability.oracle.com/v1alpha1
 kind: DatabaseObserver
 metadata:
   name: pdb1-observer
-  namespace: sidb23c
+  namespace: saga-oradb
 spec:
   database:
     dbUser:
@@ -27,6 +27,75 @@ spec:
   prometheus:
     port: metrics
     labels:
-      app: app-sample-label
+      cdb: ai23-remote-cdb
+      pdb: sagapdb1
+
+  replicas: 1
+---
+apiVersion: observability.oracle.com/v1alpha1
+kind: DatabaseObserver
+metadata:
+  name: pdb2-observer
+  namespace: saga-oradb
+spec:
+  database:
+    dbUser:
+      key: "oracle_user"
+      secret: db-admin-secret
+
+    dbPassword:
+      key: "oracle_pwd"
+      secret: db-admin-secret
+
+    dbConnectionString:
+      key: "connection"
+      secret: db-admin-secret
+
+
+  exporter:
+    image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
+    
+    service:
+      port: 9161
+
+  prometheus:
+    port: metrics
+    labels:
+      cdb: ai23-remote-cdb
+      pdb: sagapdb2
+
+  replicas: 1
+---
+apiVersion: observability.oracle.com/v1alpha1
+kind: DatabaseObserver
+metadata:
+  name: pdb2-observer
+  namespace: saga-oradb
+spec:
+  database:
+    dbUser:
+      key: "oracle_user"
+      secret: db-admin-secret
+
+    dbPassword:
+      key: "oracle_pwd"
+      secret: db-admin-secret
+
+    dbConnectionString:
+      key: "connection"
+      secret: db-admin-secret
+
+
+  exporter:
+    image: "container-registry.oracle.com/database/observability-exporter:1.3.0"
+    
+    service:
+      port: 9161
+
+  prometheus:
+    port: metrics
+    labels:
+      cdb: ai23-remote-cdb
+      pdb: sagapdb2
 
   replicas: 1
