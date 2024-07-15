@@ -74,7 +74,7 @@ spec:
 apiVersion: observability.oracle.com/v1alpha1
 kind: DatabaseObserver
 metadata:
-  name: pdb2-observer
+  name: pdb3-observer
   namespace: saga-oradb
 spec:
   database:
@@ -105,6 +105,6 @@ spec:
     port: metrics
     labels:
       cdb: ai23-remote-cdb
-      pdb: sagapdb2
+      pdb: sagapdb3
 
   replicas: 1
