@@ -33,7 +33,7 @@ spec:
   #action: "Create"
   #action: "Delete"
   #dropAction: "INCLUDING"
-  pdbState: "CLOSE"
+  pdbState: "OPEN"
   modifyOption: "IMMEDIATE"
   action: "Modify"
   pdbTlsCat:
