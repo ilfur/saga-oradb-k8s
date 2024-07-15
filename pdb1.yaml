@@ -5,6 +5,7 @@ metadata:
   namespace: saga-oradb
   labels:
     cdb: ai23-remote-cdb
+    pdb: sagapdb1
 spec:
   cdbResName: "ai23-cloud-cdb"
   cdbNamespace: "23aidemo"
