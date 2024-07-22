@@ -1,5 +1,8 @@
-column coordinator format a15
-column initiator format a15
+set linesize 150
+column coordinator format a20
+column start_time format a32
+column finalization_time format a32
+column initiator format a18
 column broker_name format a5
 column broker_topic format a10
   
