@@ -1,4 +1,4 @@
-create user pdb_adm identified by pdb_adm container=all;
+create user pdb_adm identified by pdb_adm;
 default tablespace system
 temporary tablespace temp;
 
