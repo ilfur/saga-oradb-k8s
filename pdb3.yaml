@@ -30,14 +30,14 @@ spec:
   fileNameConversions: NONE
   totalSize: "1G"
   tempSize: "100M"
-  #action: "Create"
+  action: "Create"
   #action: "Delete"
   #dropAction: "INCLUDING"
   pdbState: "OPEN"
   modifyOption: "READ WRITE"
   #pdbState: "CLOSE"
   #modifyOption: "IMMEDIATE"
-  action: "Modify"
+  #action: "Modify"
   pdbTlsCat:
     secret:
       secretName: "db-ca"
