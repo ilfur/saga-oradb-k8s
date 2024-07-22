@@ -1,3 +1,8 @@
+column coordinator format a15
+column initiator format a15
+column broker_name format a5
+column broker_topic format a10
+  
 select name, broker_topic, queue_type from dba_saga_brokers;
 select name, broker_name, coordinator from dba_saga_participants;
 
