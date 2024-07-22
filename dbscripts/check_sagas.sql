@@ -1,4 +1,5 @@
 set linesize 150
+column name format a20
 column coordinator format a20
 column start_time format a32
 column finalization_time format a32
