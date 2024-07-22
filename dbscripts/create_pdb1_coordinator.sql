@@ -22,8 +22,8 @@ create or replace package body dbms_ta_cbk as
 procedure response(saga_id in RAW, saga_sender IN varchar2, payload IN JSON DEFAULT NULL) as
 booking_result VARCHAR2(10);
 begin
-  insert into travelagencytest values(saga_sender);
-  insert into travelagencytest values(json_serialize(payload));
+  --insert into travelagencytest values(saga_sender);
+  --insert into travelagencytest values(json_serialize(payload));
   booking_result := json_value(payload, '$.result');
   IF booking_result = 'success' THEN
     dbms_saga.commit_saga('TravelAgencyPLSQL', saga_id);
