@@ -6,6 +6,9 @@ column finalization_time format a32
 column initiator format a18
 column broker_name format a5
 column broker_topic format a20
+column id format a32
+column participant format a20
+column status format a20
   
 select name, broker_topic, queue_type from dba_saga_brokers;
 select name, broker_name, coordinator, queue_type from dba_saga_participants;
